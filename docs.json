@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "HiB Documentation",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#ff2056",
+    "light": "#ff2056",
+    "dark": "#ff2056"
   },
   "favicon": "./assets/favicon.ico",
   "navigation": {
