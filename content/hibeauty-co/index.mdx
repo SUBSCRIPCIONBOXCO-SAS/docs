@@ -1,0 +1,50 @@
+---
+title: "HiBeauty Colombia API"
+description: "Backend principal del ecosistema tecnológico de colombia."
+---
+
+
+Bienvenido a la documentación oficial del backend principal de Colombia.
+Desde este backend, se configura todo el funcionamiento operativo y logico de todo el ecosistema tecnológico de Colombia, que incluye: Landing page principal, landing page promocional, panel administrativo para empleados y panel administrativo para usuarios.
+
+## Introducción
+
+Si es primera vez que vas a operar con el código de este backend, es importante que revises los siguientes puntos:
+
+1. Lee la guía de [autenticación](https://chatgpt.com/hibeauty-co/api/authentication) general.
+2. Lee la guía de iniciación general.
+3. Solicita al equipo de desarrollo, las variables de entorno necesarias para la puesta en marcha del backend.
+
+## API
+
+La API está construida sobre Express \+ JavaScript, y utiliza una arquitectura modular.
+
+Base URL `https://api.hibeauty.com.co/`
+
+## Modulos disponibles
+
+### Operaciones
+
+En la API vas a tener acceso a los siguientes modulos operativos:
+
+- **Users** — Crea y administra a usuarios y su información (aplica para empleados y clientes).
+- **Products** — Gestiona los productos disponibles en cajitas y tienda en linea.
+- **Payments** — Obten pagos sincronizados con las pasarelas utilizadas como medio de pago.
+- **Subscriptions** — Gestiona las suscripciones de los clientes.
+
+### Integraciones
+
+En la API vas a tener acceso a las siguientes integraciones:
+
+- **S3** - Sube o borra archivos en AWS S3.
+- **Wompi** - Realiza operaciones transaccionales sobre este procesador de pagos.
+
+## Autenticación
+
+La autenticación requiere de forma general, un token de acceso para realizar peticiones a puntos de acceso protegidos.
+
+Ver la guía de [autenticación](https://chatgpt.com/hibeauty-co/api/authentication) para más información.
+
+## Aviso de actualización
+
+Esta documentación está en constante actualización por lo que no deberías de dar nada por sentado.

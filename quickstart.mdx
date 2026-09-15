@@ -1,47 +1,41 @@
 ---
-title: "Quickstart"
-description: "Begin with a guide on the fastest path to a successful outcome"
+title: "Guía de inicio"
+description: "Guía de inicio para todo el ecosistema Hi Beauty"
 ---
 
-Describe how someone begins using your product. What is the first thing they need to do? Are there any prerequisites?
+Describe todos los requisitos para poder ejecutar los proyectos en tu entorno local, así como poder envíar cambios a producción.
 
-A quickstart should take someone from zero to using your product. They'll get a quick win and a sense of what they can accomplish.
+## Prerequisitos
 
-## Prerequisites
+Antes de iniciar, es recomendable:
 
-Before you begin, you must have:
+- Solicitar acceso a 1Password para acceder a las diferentes integraciones que dispone el ecosistema.
+- Solicitar las variables de entorno de cada repositorio a cada uno de los desarrolladores encargados.
+- Solicitar usuario a AWS CLI para poder acceder a las bases de datos en modo port-forward.
+- Instalar `AWS CLI` en su última versión disponible y la herramienta `kubectl`.
+- Clonar los diferentes repositorios.
+- Node v20.0.4 LTS o superior.
+- Instalar dependencias según `package.json` con `pnpm i`.
 
-- Requirement one (for example, Node.js 18+, a free account, an API key)
-- Requirement two (for example, a compatible device, a compatible browser, a compatible operating system)
+<Danger>
+  Nunca utilizar `npm` como administrador de paquetes para trabajar con los repositorios de SUBSCRIPCIONBOXCO-SAS.
+</Danger>
 
-## Get started
+## Cambios a producción
 
-<Steps>
-  <Step title="Install">
-    Describe how to install your product or sign up.
+Github es el almacenamiento para todos los repositorios de la organización.
 
-    ```bash
-    npm install your-package
-    ```
-  </Step>
-  <Step title="Configure">
-    Describe any setup or configuration needed before first use.
+Para mantener una armonía en todos estos repositorios, se recomiendan los siguientes tips:
 
-    ```bash
-    your-cli init
-    ```
-  </Step>
-  <Step title="Run it">
-    Show the first thing a user does to see it working.
+### Estructura de commits
 
-    ```bash
-    your-cli start
-    ```
-  </Step>
-</Steps>
+- Utilizar la estructura convencional `action(module)`. Entre las acciones: `feat`, `refactor`, `fix` y demás. Siempre agregar descripción adicional para detallar los cambios realizados.
+- Crear tu rama en local, y luego enviar `pull request` hacía `origin/develop-rf` para aprovación del encargado de CI/CD.
 
-<Tip>
-  Give people a way to get help. This could be a link to a support page, a chat with a customer support agent, or a forum for your product.
+<Info>
+  En lo posible, no envíar cambios directo a las ramas `origin/develop-rf`, `origin/master` o `origin/main`
+</Info>
 
-  Example: Need help? Reach out to us at [support@yourcompany.com](mailto:support@yourcompany.com).
-</Tip>
+### Pruebas
+
+Si bien, en **Hi Beauty** no contamos con un ambiente de pruebas ni scripts para realizarlas, siempre es recomendable realizar pruebas exhaustivas sobre los cambios realizados antes de envíar cambios a producción.
